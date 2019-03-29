@@ -3,13 +3,13 @@ import { User } from "../user";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from 'rxjs'
 import { map } from 'rxjs/operators';
-import { Repos } from "../repo/repos"
-import { environment } from "../environments/environment"
+import { Repos } from "../repo/repos";
+import { environment } from "../../environments/environment";
 
 
 @Injectable()
 export class SearchService {
-
+baseUrl = environment.baseUrl;
   constructor(private http:HttpClient) {
   // this.user=new User("","");
 
