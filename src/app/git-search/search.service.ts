@@ -8,7 +8,7 @@ import { Repos } from "../repo/repos"
 
 @Injectable()
 export class SearchService {
-  baseUrl="https://api.github.com";
+
   constructor(private http:HttpClient) {
   // this.user=new User("","");
 
