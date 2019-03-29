@@ -1,11 +1,44 @@
 <div class="card">
   <div class="card-body">
     <label for="">Search User</label>
-    <input class="form-control search" placeholder="Search" type="serch" name="" value="">
-    <button class="btn btn-primary" type="button" name="button">Submit</button>
+    <input class="form-control search" placeholder="Search" type="serch" name="userName" [(ngModel)]="userName" value="">
+    <button  (click)=getRepos() class="btn btn-primary" type="button" name="button">Submit</button>
+    <button  (click)=getUsers() class="btn btn-primary" type="button" name="button">Submit</button>
 
   </div>
-  <img src="{{user.avatar_url}}" alt="">
-  <h2>Github username:{{user.login}}</h2>
+  <div  class="">
+    <img src="{{user.avatar_url}}" alt="">
+    <h2>Github username:{{user.login}}</h2>
+  </div>
+
 
 </div>
+<div *ngIf="loading" class="form-group">
+Loading
+</div>
+<div *ngIf='errorMessage' class="alert alert-warning">
+  <strong>Warning</strong>
+
+</div>
+<div class='table-responsive'>
+    <table class='table'>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>HTML Url</th>
+        <th>description</th>
+
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let repo of repos;">
+        <td>{{repo.id}}</td>
+        <td>{{repo.name}}</td>
+        <td><a href="{{repo.html_url}}">{{repo.html_url}}</a> </td>
+        <td>{{repo.description}}</td>
+    </tr>
+</tbody>
+</table>
+</div>
+<!-- <pre>{{repos | json}}</pre> -->
