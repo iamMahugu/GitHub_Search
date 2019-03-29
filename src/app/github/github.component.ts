@@ -39,17 +39,29 @@ export class GithubComponent implements OnInit {
    )
    }
    public getUsers(event:any){
-     this.loading=true;
-     this.searchService.getUsers(this.userName).subscribe((response)=>{
-       this.user=response;
-
-     },
-     (error)=>{
-      
-
-     },
-     ()=>{this.loading=false}
-   )
+     //promise
+     let promise =new Promise((resolve,reject)=>{
+      this.searchService.getUsers(this.userName).toPromise().then(response=>{
+        this.user=response;
+         resolve()
+       },
+       error=>{
+         this.errorMessage="An error was encountered"
+       }
+     )
+     })
+     return promise;
+   //   this.loading=true;
+   //   this.searchService.getUsers(this.userName).subscribe((response)=>{
+   //     this.user=response;
+   //
+   //   },
+   //   (error)=>{
+   //
+   //
+   //   },
+   //   ()=>{this.loading=false}
+   // )
    }
 
 

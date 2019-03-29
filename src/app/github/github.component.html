@@ -6,13 +6,15 @@
     <div class="card-body">
       <label for="">Search User</label>
       <input (keyup)='getUsers($event)' class="form-control search" placeholder="Search" type="serch" name="userName" [(ngModel)]="userName" value="">
-      <button  (click)=getRepos() class="btn btn-primary" type="button" name="button">Searh Repos</button>
+      <button  (click)=getRepos() (click)=getUsers() class="btn btn-primary" type="button" name="button">Searh Repos</button>
       <!-- <button  (click)=getUsers() class="btn btn-primary" type="button" name="button">Submit</button> -->
 
     </div>
     <div  class="">
       <img src="{{user.avatar_url}}" alt="">
-      <h2>Github username:{{user.login}}</h2>
+      <h2>Name:{{user.name}}</h2>
+      <p>{{user.company}}</p>
+      <p>{{user.location}}</p>
     </div>
 
 

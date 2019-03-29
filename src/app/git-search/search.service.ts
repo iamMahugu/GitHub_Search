@@ -41,8 +41,11 @@ export class SearchService {
 
 }
   getUsers(userName:string):Observable<User[]>{
-      return this.http.get<User[]>(this.baseUrl+"/users/"+ userName)
+    return this.http.get<User[]>(this.baseUrl+"/users/"+ userName)
+
+
   }
+
 
 
 
