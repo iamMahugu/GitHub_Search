@@ -45,8 +45,7 @@ export class GithubComponent implements OnInit {
 
      },
      (error)=>{
-       this.errorMessage=error;
-       this.loading=false;
+      
 
      },
      ()=>{this.loading=false}
