@@ -1,5 +1,7 @@
 export class User {
-  login:string;
+  name:string;
+  company:string;
+  location:string;
   avatar_url:string;
 
 }
