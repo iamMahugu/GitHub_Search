@@ -28,7 +28,7 @@ export class GithubComponent implements OnInit {
      this.errorMessage="User could not be found Try Another Name";
      this.searchService.getRepos(this.userName).subscribe((response)=>{
        this.repos=response;
-       
+
      },
      (error)=>{
        this.errorMessage=error;
@@ -38,7 +38,7 @@ export class GithubComponent implements OnInit {
      ()=>{this.loading=false}
    )
    }
-   public getUsers(){
+   public getUsers(event:any){
      this.loading=true;
      this.searchService.getUsers(this.userName).subscribe((response)=>{
        this.user=response;

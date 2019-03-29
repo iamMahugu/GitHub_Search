@@ -1,9 +1,9 @@
 <div class="card">
   <div class="card-body">
     <label for="">Search User</label>
-    <input class="form-control search" placeholder="Search" type="serch" name="userName" [(ngModel)]="userName" value="">
-    <button  (click)=getRepos() class="btn btn-primary" type="button" name="button">Submit</button>
-    <button  (click)=getUsers() class="btn btn-primary" type="button" name="button">Submit</button>
+    <input (keyup)='getUsers($event)' class="form-control search" placeholder="Search" type="serch" name="userName" [(ngModel)]="userName" value="">
+    <button  (click)=getRepos() class="btn btn-primary" type="button" name="button">Searh Repos</button>
+    <!-- <button  (click)=getUsers() class="btn btn-primary" type="button" name="button">Submit</button> -->
 
   </div>
   <div  class="">
