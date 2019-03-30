@@ -13,8 +13,8 @@
     <div  class="">
       <img src="{{user.avatar_url}}" title="{{user.name}}" alt="">
       <h2>Name:{{user.name}}</h2>
-      <p>Orginization {{user.company}}</p>
-      <p>City {{user.location}}</p>
+      <p><i class="fab fa-megaport">Orginization</i>: {{user.company}}</p>
+      <p><i class="fas fa-globe-africa">City</i>: {{user.location}}</p>
     </div>
 
 
@@ -22,13 +22,14 @@
 </div>
 
 <div class="col-md-7">
-  <div *ngIf="loading" class="form-group">
-  Loading
+  <div *ngIf="loading" class="form-group progress">
+  <ng-progress></ng-progress>
   </div>
+  <!--
   <div *ngIf='errorMessage' class="alert alert-warning">
     <strong>Warning</strong>
 
-  </div>
+  </div> -->
   <div class='table-responsive'>
       <table class='table'>
       <thead>

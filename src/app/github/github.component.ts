@@ -26,17 +26,31 @@ export class GithubComponent implements OnInit {
    public getRepos(){
      this.loading=true;
      this.errorMessage="User could not be found Try Another Name";
-     this.searchService.getRepos(this.userName).subscribe((response)=>{
-       this.repos=response;
+     let promise=new Promise((resolve,reject)=>{
+       this.searchService.getRepos(this.userName).toPromise().then(response=>{
+         this.repos=response;
+         resolve()
+       },
+       error=>{
+         this.loading=false;
+       }),()=>{this.loading=true}
 
-     },
-     (error)=>{
-       this.errorMessage=error;
-       this.loading=false;
+     })
 
-     },
-     ()=>{this.loading=false}
-   )
+     return promise;
+
+     //promise ends
+   //   this.searchService.getRepos(this.userName).subscribe((response)=>{
+   //     this.repos=response;
+   //
+   //   },
+   //   (error)=>{
+   //     this.errorMessage=error;
+   //     this.loading=false;
+   //
+   //   },
+   //   ()=>{this.loading=false}
+   // )
    }
    public getUsers(event:any){
      //promise
