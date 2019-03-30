@@ -1,0 +1,9 @@
+.jumbotron{
+  background-image: url("/assets/img/ex.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+}
+.jumbotron h1{
+  color: white !important;
+}
