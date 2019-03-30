@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { GithubComponent } from './github/github.component';
 import { SearchService } from "./git-search/search.service";
 import { UserWelcomeComponent } from './user-welcome/user-welcome.component';
+import { BgColorDirective } from './bg-color.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubComponent,
-    UserWelcomeComponent
+    UserWelcomeComponent,
+    BgColorDirective
   ],
   imports: [
     BrowserModule,
