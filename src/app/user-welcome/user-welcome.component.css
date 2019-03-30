@@ -17,9 +17,13 @@
     margin-top: 50px;
   }
   .height{
-    height: 450px;;
+    height: 450px;
+
   }
 
+}
+.card-body{
+  transition: 450ms;
 }
 .body{
   background-color: rgba(255,0,0,0.1);
