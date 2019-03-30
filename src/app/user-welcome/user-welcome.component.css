@@ -1,10 +1,13 @@
-.jumbotron{
+.jumbo{
   background-image: url("/assets/img/ex.jpg");
   background-size: cover;
   background-position: center;
   height: 70vh;
 }
-.jumbotron h1{
+.jumbotron{
+  background-color: rgba(0,0,0,0.1);
+}
+.jumbo h1{
   color: white !important;
 }
 @media screen and (min-width:800px) {
