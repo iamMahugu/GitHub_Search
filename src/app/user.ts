@@ -3,5 +3,5 @@ export class User {
   company:string;
   location:string;
   avatar_url:string;
-
+  
 }
