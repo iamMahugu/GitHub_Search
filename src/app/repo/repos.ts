@@ -6,5 +6,6 @@ export class Repos {
   labels_url:string;
   language:string;
   languages_url:string;
+  created_at:string
 
 }

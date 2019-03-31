@@ -47,7 +47,8 @@
             <h5><a href="{{repo.html_url}}" >{{repo.name}}</a></h5>
           </div>
           <div class="card-body">
-            {{repo.description}}
+            {{repo.description}} <br>
+            Date created: {{repo.created_at|date}}
           </div>
           <div class="">
             <span><a href="{{repo.languages_url}}"></a> {{repo.language}}</span>
