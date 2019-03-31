@@ -36,9 +36,7 @@
     <span>Repos:{{user.public_repos}}</span>
     <hr class="bg-info">
   <div class="row">
-    <div *ngIf='errorMessage' class="alert alert-warning">
-      <strong>Warning {{errorMessage}} please Try a valid userName</strong>
-    </div>
+
 
     <div *ngFor='let repo of repos' class="col-md-8">
       <div  class="card mar">
@@ -57,6 +55,9 @@
 
 
       </div>
+    </div>
+    <div *ngIf='errorMessage' class="alert alert-warning">
+      <strong>Warning {{errorMessage}} please Try a valid userName</strong>
     </div>
 
   </div>
