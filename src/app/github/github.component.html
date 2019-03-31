@@ -6,7 +6,7 @@
   <div class="card">
     <div class="card-body">
       <label for="">Search User</label>
-      <input (keyup)='getUsers($event)' class="form-control search" placeholder="Search" type="serch" name="userName" [(ngModel)]="userName" value="">
+      <input (keyup)='getUsers($event)' class="form-control search" placeholder="Search user" type="search" name="userName" [(ngModel)]="userName" value="">
       <button  (click)=getRepos() (click)=getUsers() class="btn btn-primary" type="button" name="button">Search</button>
       <!-- <button  (click)=getUsers() class="btn btn-primary" type="button" name="button">Submit</button> -->
 
