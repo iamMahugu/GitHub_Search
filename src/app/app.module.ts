@@ -12,6 +12,7 @@ import { SearchService } from "./git-search/search.service";
 import { UserWelcomeComponent } from './user-welcome/user-welcome.component';
 import { BgColorDirective } from './bg-color.directive';
 import { Error404Component } from './error404/error404.component';
+import { DateCountPipe } from './date-count.pipe';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { Error404Component } from './error404/error404.component';
     GithubComponent,
     UserWelcomeComponent,
     BgColorDirective,
-    Error404Component
+    Error404Component,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
