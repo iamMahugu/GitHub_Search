@@ -4,13 +4,22 @@ img{
 }
 .mar{
   margin: 5px;
-  height: 200px;
+  height:auto;
+
+}
+.mar:hover{
+  background-color: #2142;
+  transition: 450ms;
 }
 .marg{
   margin: 3px;
 }
+a{
+  font-weight: 400;
+}
 a:hover{
   text-decoration: underline;
   color: #567;
+
 
 }
