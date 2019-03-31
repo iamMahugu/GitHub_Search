@@ -5,5 +5,6 @@ export class Repos {
   description:string;
   labels_url:string;
   language:string;
+  languages_url:string;
 
 }

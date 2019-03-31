@@ -21,5 +21,27 @@ a:hover{
   text-decoration: underline;
   color: #567;
 
-
+}
+.search1{
+  display: inline-flex;
+  flex: 1 1 300px;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.fa-searchengin{
+  padding: 0.7rem;
+}
+.search{
+  flex: 1;
+  border: 0;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+}
+#btn{
+  background: #538AC5;
+ border: 0;
+ color: white;
+ padding: 0.5rem;
+ border-radius: 0;
 }

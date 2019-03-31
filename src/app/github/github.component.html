@@ -6,8 +6,13 @@
   <div class="card">
     <div class="card-body">
       <label for="">Search User</label>
-      <input (keyup)='getUsers($event)' class="form-control search" placeholder="Search user" type="search" name="userName" [(ngModel)]="userName" value="">
-      <button  (click)=getRepos() (click)=getUsers() class="btn btn-primary" type="button" name="button">Search</button>
+      <div class="search1">
+        <i class="fab fa-searchengin"></i>
+        <input (keyup)='getUsers($event)' class="form-control search" placeholder="Search ..." type="search" name="userName" [(ngModel)]="userName" value="">
+        <button id="btn"  (click)=getRepos() (click)=getUsers() class="btn btn-primary" type="button" name="button">Search</button>
+
+      </div>
+
       <!-- <button  (click)=getUsers() class="btn btn-primary" type="button" name="button">Submit</button> -->
 
     </div>
@@ -42,7 +47,7 @@
             {{repo.description}}
           </div>
           <div class="">
-            <span> {{repo.language}}</span>
+            <span><a href="{{repo.languages_url}}"></a> {{repo.language}}</span>
           </div>
         </div>
 
