@@ -1,8 +1,6 @@
 $(document).ready(function () {
-  $("#slide").click(function(){
-    swal("git loading",{
-      buttons:{cancel:false,confirm:false},
-      timer:1000
-    })
+  $("#cards").click(function(){
+    $("html,body").animate({scrollTop:$("#card").height()},2000);
+      return false;
   })
 });
