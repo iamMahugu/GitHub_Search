@@ -1,27 +1,46 @@
 # GithubSearch
+#### This is an Angular web application, It uses Github Api , 2019
+#### By **[Collins kipkemoi](https://github.com/kipkemoimayor)**
+## Description
+This is a single web page Angular application where users can search any user on Github, This application uses RestFul Github api to communicate between the http HttpClient and Restful Api. When a user prompt the application to search users all information associated with the user is displayed on The Gui
+## Setup/Installation Requirements
+* A web browser.
+* The web browser should support HTML5.
+* its simple to use and great responsive GUI.
+* easy to navigate through using a smart phone.
+* JavaScript support.
+* a PC of 500mb Ram and 20gb HDD connected to the internet.
+* clone the directory into your local machine
+* Then make sure you have angular and Node installed
+* Install npm
+* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Known Bugs
+NO known bugs as at the moment please reach to us if you see any.
+## Behavior Driven Development
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+| __Behavior__  | __Input example__ | __Output example__ |
+| ------------- | ----------------- | ------------------ |
+| Displays web skeleton | HTML5   | content |
+| Display data using bootstrap  | h1    | class jumbotron |
+| Generate a new class | name,html-url | data |
+| Test if APiUrl will query some data | https://url.com/ | [name:kerr,login:dela] |
+| Create a search function on input search name | mayor | mayor calipso or user not found |
+| Create an array to stored all data   | users:[] | data objects array |
+| Create a function to search Repos| username | list of repos |
+| Display both repos and username on DoM | Collins | name:collins repos:[wala,locker,rest] |
+## Technologies Used
+## main languages used are
+* JavaSCript
+* HTML5
+* CSS
+* TypeScript
+* bootstrap
+* sweetalert js
+* Angular Famework
+## You can view active website here https://kipkemoimayor.github.io/Github-search/
+## Support and contact details
+get me at collinskipkemoi24@gmail.com
+### License
+*License is under MIT 2019*
+Copyright (c) 2019 **collins kipkemoi**
+This software is free to use and distribute, Therefore all rights and given to any user to modify and either use for Commercial purpose or local purpose.
