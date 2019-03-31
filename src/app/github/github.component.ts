@@ -24,16 +24,16 @@ export class GithubComponent implements OnInit {
   constructor(private http:HttpClient,private searchService:SearchService) {
    }
    public getRepos(){
-     this.loading=true;
-     this.errorMessage="User could not be found Try Another Name";
+
      let promise=new Promise((resolve,reject)=>{
        this.searchService.getRepos(this.userName).toPromise().then(response=>{
          this.repos=response;
          resolve()
        },
        error=>{
-         this.loading=false;
-       }),()=>{this.loading=true}
+          this.errorMessage="An Error Occured"
+         reject(error)
+       })
 
      })
 
@@ -54,13 +54,17 @@ export class GithubComponent implements OnInit {
    }
    public getUsers(event:any){
      //promise
+
+
+
      let promise =new Promise((resolve,reject)=>{
       this.searchService.getUsers(this.userName).toPromise().then(response=>{
         this.user=response;
          resolve()
        },
        error=>{
-         this.errorMessage="An error was encountered"
+         this.errorMessage="An error was encountered";
+         reject(error);
        }
      )
      })

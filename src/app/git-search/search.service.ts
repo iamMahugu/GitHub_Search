@@ -37,9 +37,9 @@ baseUrl = environment.baseUrl;
 
 }
 
+
   getRepos(userName:string):Observable<Repos[]>{
     return this.http.get<Repos[]>(this.baseUrl+"/users/"+ userName+"/repos")
-
 }
   getUsers(userName:string):Observable<User[]>{
     return this.http.get<User[]>(this.baseUrl+"/users/"+ userName)

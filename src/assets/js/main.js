@@ -7,6 +7,6 @@ $(document).ready(function () {
       strings:["Search Repos","Search Users","Search user Names","All in one","Hit the button below to get started"],
       backSpeed:70,
       typeSpeed:80,
-      loop:1
+      loop:true
     })
 });
