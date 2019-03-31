@@ -2,3 +2,15 @@ img{
   height: 250px;
   width: auto;
 }
+.mar{
+  margin: 5px;
+  height: 200px;
+}
+.marg{
+  margin: 3px;
+}
+a:hover{
+  text-decoration: underline;
+  color: #567;
+
+}

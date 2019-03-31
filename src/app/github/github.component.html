@@ -2,7 +2,7 @@
 <div class="row">
 
 
-<div class="col-md-5">
+<div class="col-md-4">
   <div class="card">
     <div class="card-body">
       <label for="">Search User</label>
@@ -22,36 +22,65 @@
   </div>
 </div>
 
-<div class="col-md-7">
+<div class="col-md-8">
   <div *ngIf="loading" class="form-group progress">
-  <ng-progress></ng-progress>
+  </div>
+    <span>Repos</span>
+    <hr class="bg-info">
+  <div class="row">
+
+    <div *ngFor='let repo of repos' class="col-md-6">
+      <div  class="card mar">
+        <div class="marg">
+          <div class="card-title">
+            <h5><a href="{{repo.html_url}}" >{{repo.name}}</a></h5>
+          </div>
+          <div class="card-body">
+            {{repo.description}}
+            <div class="">
+
+            </div>
+
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
   </div>
   <!--
   <div *ngIf='errorMessage' class="alert alert-warning">
     <strong>Warning</strong>
 
   </div> -->
-  <div class='table-responsive'>
+  <div  class="">
+
+  </div>
+
+
+
+
+  <!-- <div class='table-responsive'>
       <table class='table'>
       <thead>
       <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>HTML Url</th>
+          <th>Repo Name</th>
+          <th>Github Url</th>
           <th>description</th>
 
       </tr>
   </thead>
   <tbody>
       <tr *ngFor="let repo of repos;">
-          <td>{{repo.id}}</td>
-          <td>{{repo.name}}</td>
+          <td> {{repo.name}}</td>
           <td><a class="btn btn-info" href="{{repo.html_url}}">View Repo</a> </td>
           <td>{{repo.description}}</td>
       </tr>
   </tbody>
   </table>
-  </div>
+  </div> -->
 </div>
 </div>
 </div>
