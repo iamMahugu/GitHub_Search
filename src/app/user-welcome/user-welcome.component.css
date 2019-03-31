@@ -4,6 +4,7 @@
   background-position: center;
   height: 70vh;
   background-attachment: fixed;
+  background-color: rgba(0,0,0,0.3);
 }
 .jumbotron{
   background-color: rgba(0,0,0,0.3);
@@ -40,5 +41,6 @@
   float: right;
 }
 #type{
-  color:black;
+  color:white;
+  font-size: 20px;
 }

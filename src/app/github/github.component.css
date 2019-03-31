@@ -45,3 +45,9 @@ a:hover{
  padding: 0.5rem;
  border-radius: 0;
 }
+.container-fluid{
+  background-color: #2442;
+}
+.card{
+  background-color: #2441;
+}
