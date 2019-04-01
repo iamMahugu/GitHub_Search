@@ -20,6 +20,7 @@ export class GithubComponent implements OnInit {
   loading:boolean =false;
   errorMessage="";
   user:User[];
+  users:any=[];
 
   constructor(private http:HttpClient,private searchService:SearchService) {
    }
@@ -47,7 +48,7 @@ export class GithubComponent implements OnInit {
      }
      let promise =new Promise((resolve,reject)=>{
       this.searchService.getUsers(this.userName).toPromise().then(response=>{
-        this.user=response;
+        this.users=response;
          resolve()
 
 
@@ -65,7 +66,7 @@ export class GithubComponent implements OnInit {
 
 
   ngOnInit() {
-    
+
   }
 
 }

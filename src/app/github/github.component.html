@@ -17,13 +17,13 @@
 
     </div>
     <div  class="">
-      <img src="{{user.avatar_url}}" title="{{user.name}}" alt="">
-      <h2>{{user.name}}</h2>
-      <p>{{user.login}}</p>
-      <p><i class="fab fa-megaport"></i>: {{user.company}}</p>
-      <p><i class="fas fa-globe-africa"></i>: {{user.location}}</p>
-      <p><i class="fas fa-biohazard"></i>{{user.bio}}</p>
-      <a href="{{user.html_url}}"><button class="btn btn-outline-info" type="button" name="button">View on  Github</button></a>
+      <img src="{{users.avatar_url}}" title="{{users.name}}" alt="">
+      <h2 >{{users.name}}</h2>
+      <p>{{users.login}}</p>
+      <p><i class="fab fa-megaport"></i>: {{users.company}}</p>
+      <p><i class="fas fa-globe-africa"></i>: {{users.location}}</p>
+      <p><i class="fas fa-biohazard"></i>{{users.bio}}</p>
+      <a href="{{users.html_url}}"><button class="btn btn-outline-info" type="button" name="button">View on  Github</button></a>
     </div>
 
 
@@ -33,7 +33,7 @@
 <div class="col-md-8">
   <div *ngIf="loading" class="form-group progress">
   </div>
-    <span>Repos:{{user.public_repos}}</span>
+    <span>Repos:{{users.public_repos}}</span>
     <hr class="bg-info">
   <div class="row">
 
@@ -42,7 +42,7 @@
       <div  class="card mar">
         <div class="marg">
           <div class="card-title">
-            <h5><a href="{{repo.html_url}}" >{{repo.name}}</a></h5>
+            <h5><a href="{{repo.html_url}}" >{{repos.name}}</a></h5>
           </div>
           <div class="card-body">
             {{repo.description}} <br>
