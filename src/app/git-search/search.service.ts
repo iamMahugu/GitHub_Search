@@ -10,6 +10,7 @@ import { environment } from "../../environments/environment";
 @Injectable()
 export class SearchService {
 baseUrl = environment.baseUrl;
+apiKey =environment.apiKey;
   constructor(private http:HttpClient) {
 
 
@@ -21,10 +22,10 @@ baseUrl = environment.baseUrl;
 
 
   getRepos(userName:string):Observable<Repos[]>{
-    return this.http.get<Repos[]>(this.baseUrl+"/users/"+ userName+"/repos")
+    return this.http.get<Repos[]>(this.baseUrl+"/users/"+ userName+"/repos"+this.apiKey)
 }
   getUsers(userName:string):Observable<User[]>{
-    return this.http.get<User[]>(this.baseUrl+"/users/"+ userName)
+    return this.http.get<User[]>(this.baseUrl+"/users/"+ userName+this.apiKey)
 
 
   }
