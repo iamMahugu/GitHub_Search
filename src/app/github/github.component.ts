@@ -15,10 +15,10 @@ import { Repos } from "../repo/repos";
 export class GithubComponent implements OnInit {
 
 
-  userName:string="kipkemoimayor";
+  userName:string="";
   repos:Repos[];
   loading:boolean =false;
-  errorMessage;
+  errorMessage="";
   user:User[];
 
   constructor(private http:HttpClient,private searchService:SearchService) {
@@ -39,28 +39,18 @@ export class GithubComponent implements OnInit {
 
      return promise;
 
-     //promise ends
-   //   this.searchService.getRepos(this.userName).subscribe((response)=>{
-   //     this.repos=response;
-   //
-   //   },
-   //   (error)=>{
-   //     this.errorMessage=error;
-   //     this.loading=false;
-   //
-   //   },
-   //   ()=>{this.loading=false}
-   // )
    }
    public getUsers(event:any){
      //promise
-
-
-
+     interface ApiResponse{
+       user:User[]
+     }
      let promise =new Promise((resolve,reject)=>{
       this.searchService.getUsers(this.userName).toPromise().then(response=>{
         this.user=response;
          resolve()
+
+
        },
        error=>{
          this.errorMessage="An error was encountered";
@@ -69,24 +59,13 @@ export class GithubComponent implements OnInit {
      )
      })
      return promise;
-   //   this.loading=true;
-   //   this.searchService.getUsers(this.userName).subscribe((response)=>{
-   //     this.user=response;
-   //
-   //   },
-   //   (error)=>{
-   //
-   //
-   //   },
-   //   ()=>{this.loading=false}
-   // )
+
    }
 
 
-  ngOnInit() {
-    // this.searchService.gitSearch()
-    // this.user=this.searchService.user
 
+  ngOnInit() {
+    
   }
 
 }

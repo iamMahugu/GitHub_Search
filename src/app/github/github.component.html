@@ -9,7 +9,7 @@
       <div class="search1">
         <i class="fab fa-searchengin"></i>
         <input (keyup)='getUsers($event)' class="form-control search" placeholder="Search ..." type="search" name="userName" [(ngModel)]="userName" value="">
-        <button id="btn"  (click)=getRepos() (click)=getUsers() class="btn btn-primary" type="button" name="button">Search</button>
+        <button id="btn"  (click)=getRepos() (click)=getUsers(user) class="btn btn-primary" type="button" name="button">Search</button>
 
       </div>
 
@@ -38,7 +38,7 @@
   <div class="row">
 
 
-    <div *ngFor='let repo of repos' class="col-md-8">
+    <div *ngFor='let repo of repos' class="col-md-6">
       <div  class="card mar">
         <div class="marg">
           <div class="card-title">
