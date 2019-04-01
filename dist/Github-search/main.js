@@ -365,27 +365,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var SearchService = /** @class */ (function () {
     function SearchService(http) {
-        // this.user=new User("","");
         this.http = http;
         this.baseUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].baseUrl;
     }
     SearchService.prototype.gitSearch = function () {
-        // interface ApiResponse{
-        //   avatar_url:string;
-        //   login:string
-        //       }
-        //       let promise=new Promise((resolve,reject)=>{
-        //         this.http.get<ApiResponse>("https://api.github.com/users").toPromise().then(response=>{
-        //           this.user.avatar_url=response[0].avatar_url
-        //           this.user.login=response[0].login
-        //           console.log(response)
-        //           resolve()
-        //         },
-        //       error=>{
-        //         this.user.login="an error occured try again"
-        //       })
-        //       })
-        //       return promise
     };
     SearchService.prototype.getRepos = function (userName) {
         return this.http.get(this.baseUrl + "/users/" + userName + "/repos");
@@ -411,7 +394,7 @@ var SearchService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "img{\n  height: 250px;\n  width: auto;\n}\n.mar{\n  margin: 5px;\n  height:auto;\n\n}\n.mar:hover{\n  background-color: #2142;\n  transition: 450ms;\n}\n.marg{\n  margin: 3px;\n}\na{\n  font-weight: 400;\n}\na:hover{\n  text-decoration: underline;\n  color: #567;\n\n}\n.search1{\n  display: inline-flex;\n  flex: 1 1 300px;\n  position: relative;\n  border: 1px solid #ccc;\n  border-radius: 5px;\n  overflow: hidden;\n}\n.fa-searchengin{\n  padding: 0.7rem;\n}\n.search{\n  flex: 1;\n  border: 0;\n  padding: 0.5rem 0.5rem 0.5rem 0;\n}\n#btn{\n  background: #538AC5;\n border: 0;\n color: white;\n padding: 0.5rem;\n border-radius: 0;\n}\n.container-fluid{\n  background-color: #2442;\n}\n.card{\n  background-color: #2441;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2l0aHViL2dpdGh1Yi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtFQUNiLFdBQVc7QUFDYjtBQUNBO0VBQ0UsV0FBVztFQUNYLFdBQVc7O0FBRWI7QUFDQTtFQUNFLHVCQUF1QjtFQUN2QixpQkFBaUI7QUFDbkI7QUFDQTtFQUNFLFdBQVc7QUFDYjtBQUNBO0VBQ0UsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSwwQkFBMEI7RUFDMUIsV0FBVzs7QUFFYjtBQUNBO0VBQ0Usb0JBQW9CO0VBQ3BCLGVBQWU7RUFDZixrQkFBa0I7RUFDbEIsc0JBQXNCO0VBQ3RCLGtCQUFrQjtFQUNsQixnQkFBZ0I7QUFDbEI7QUFDQTtFQUNFLGVBQWU7QUFDakI7QUFDQTtFQUNFLE9BQU87RUFDUCxTQUFTO0VBQ1QsK0JBQStCO0FBQ2pDO0FBQ0E7RUFDRSxtQkFBbUI7Q0FDcEIsU0FBUztDQUNULFlBQVk7Q0FDWixlQUFlO0NBQ2YsZ0JBQWdCO0FBQ2pCO0FBQ0E7RUFDRSx1QkFBdUI7QUFDekI7QUFDQTtFQUNFLHVCQUF1QjtBQUN6QiIsImZpbGUiOiJzcmMvYXBwL2dpdGh1Yi9naXRodWIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImltZ3tcbiAgaGVpZ2h0OiAyNTBweDtcbiAgd2lkdGg6IGF1dG87XG59XG4ubWFye1xuICBtYXJnaW46IDVweDtcbiAgaGVpZ2h0OmF1dG87XG5cbn1cbi5tYXI6aG92ZXJ7XG4gIGJhY2tncm91bmQtY29sb3I6ICMyMTQyO1xuICB0cmFuc2l0aW9uOiA0NTBtcztcbn1cbi5tYXJne1xuICBtYXJnaW46IDNweDtcbn1cbmF7XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG59XG5hOmhvdmVye1xuICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbiAgY29sb3I6ICM1Njc7XG5cbn1cbi5zZWFyY2gxe1xuICBkaXNwbGF5OiBpbmxpbmUtZmxleDtcbiAgZmxleDogMSAxIDMwMHB4O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGJvcmRlcjogMXB4IHNvbGlkICNjY2M7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbn1cbi5mYS1zZWFyY2hlbmdpbntcbiAgcGFkZGluZzogMC43cmVtO1xufVxuLnNlYXJjaHtcbiAgZmxleDogMTtcbiAgYm9yZGVyOiAwO1xuICBwYWRkaW5nOiAwLjVyZW0gMC41cmVtIDAuNXJlbSAwO1xufVxuI2J0bntcbiAgYmFja2dyb3VuZDogIzUzOEFDNTtcbiBib3JkZXI6IDA7XG4gY29sb3I6IHdoaXRlO1xuIHBhZGRpbmc6IDAuNXJlbTtcbiBib3JkZXItcmFkaXVzOiAwO1xufVxuLmNvbnRhaW5lci1mbHVpZHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzI0NDI7XG59XG4uY2FyZHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzI0NDE7XG59XG4iXX0= */"
+module.exports = "img{\n  height: 250px;\n  width: auto;\n}\n.mar{\n  margin: 5px;\n  height:auto;\n\n}\n.mar:hover{\n  background-color: #2142;\n  transition: 450ms;\n}\n.marg{\n  margin: 3px;\n  height: 200px;\n}\na{\n  font-weight: 400;\n}\na:hover{\n  text-decoration: underline;\n  color: #567;\n\n}\n.search1{\n  display: inline-flex;\n  flex: 1 1 300px;\n  position: relative;\n  border: 1px solid #ccc;\n  border-radius: 5px;\n  overflow: hidden;\n}\n.fa-searchengin{\n  padding: 0.7rem;\n}\n.search{\n  flex: 1;\n  border: 0;\n  padding: 0.5rem 0.5rem 0.5rem 0;\n}\n#btn{\n  background: #538AC5;\n border: 0;\n color: white;\n padding: 0.5rem;\n border-radius: 0;\n}\n.container-fluid{\n  background-color: #2442;\n}\n.card{\n  background-color: #2441;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2l0aHViL2dpdGh1Yi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtFQUNiLFdBQVc7QUFDYjtBQUNBO0VBQ0UsV0FBVztFQUNYLFdBQVc7O0FBRWI7QUFDQTtFQUNFLHVCQUF1QjtFQUN2QixpQkFBaUI7QUFDbkI7QUFDQTtFQUNFLFdBQVc7RUFDWCxhQUFhO0FBQ2Y7QUFDQTtFQUNFLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0UsMEJBQTBCO0VBQzFCLFdBQVc7O0FBRWI7QUFDQTtFQUNFLG9CQUFvQjtFQUNwQixlQUFlO0VBQ2Ysa0JBQWtCO0VBQ2xCLHNCQUFzQjtFQUN0QixrQkFBa0I7RUFDbEIsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSxlQUFlO0FBQ2pCO0FBQ0E7RUFDRSxPQUFPO0VBQ1AsU0FBUztFQUNULCtCQUErQjtBQUNqQztBQUNBO0VBQ0UsbUJBQW1CO0NBQ3BCLFNBQVM7Q0FDVCxZQUFZO0NBQ1osZUFBZTtDQUNmLGdCQUFnQjtBQUNqQjtBQUNBO0VBQ0UsdUJBQXVCO0FBQ3pCO0FBQ0E7RUFDRSx1QkFBdUI7QUFDekIiLCJmaWxlIjoic3JjL2FwcC9naXRodWIvZ2l0aHViLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpbWd7XG4gIGhlaWdodDogMjUwcHg7XG4gIHdpZHRoOiBhdXRvO1xufVxuLm1hcntcbiAgbWFyZ2luOiA1cHg7XG4gIGhlaWdodDphdXRvO1xuXG59XG4ubWFyOmhvdmVye1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjE0MjtcbiAgdHJhbnNpdGlvbjogNDUwbXM7XG59XG4ubWFyZ3tcbiAgbWFyZ2luOiAzcHg7XG4gIGhlaWdodDogMjAwcHg7XG59XG5he1xuICBmb250LXdlaWdodDogNDAwO1xufVxuYTpob3ZlcntcbiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG4gIGNvbG9yOiAjNTY3O1xuXG59XG4uc2VhcmNoMXtcbiAgZGlzcGxheTogaW5saW5lLWZsZXg7XG4gIGZsZXg6IDEgMSAzMDBweDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG59XG4uZmEtc2VhcmNoZW5naW57XG4gIHBhZGRpbmc6IDAuN3JlbTtcbn1cbi5zZWFyY2h7XG4gIGZsZXg6IDE7XG4gIGJvcmRlcjogMDtcbiAgcGFkZGluZzogMC41cmVtIDAuNXJlbSAwLjVyZW0gMDtcbn1cbiNidG57XG4gIGJhY2tncm91bmQ6ICM1MzhBQzU7XG4gYm9yZGVyOiAwO1xuIGNvbG9yOiB3aGl0ZTtcbiBwYWRkaW5nOiAwLjVyZW07XG4gYm9yZGVyLXJhZGl1czogMDtcbn1cbi5jb250YWluZXItZmx1aWR7XG4gIGJhY2tncm91bmQtY29sb3I6ICMyNDQyO1xufVxuLmNhcmR7XG4gIGJhY2tncm91bmQtY29sb3I6ICMyNDQxO1xufVxuIl19 */"
 
 /***/ }),
 
@@ -422,7 +405,7 @@ module.exports = "img{\n  height: 250px;\n  width: auto;\n}\n.mar{\n  margin: 5p
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n<div class=\"row\">\n\n\n<div class=\"col-md-4\">\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label for=\"\">Search User</label>\n      <div class=\"search1\">\n        <i class=\"fab fa-searchengin\"></i>\n        <input (keyup)='getUsers($event)' class=\"form-control search\" placeholder=\"Search ...\" type=\"search\" name=\"userName\" [(ngModel)]=\"userName\" value=\"\">\n        <button id=\"btn\"  (click)=getRepos() (click)=getUsers(user) class=\"btn btn-primary\" type=\"button\" name=\"button\">Search</button>\n\n      </div>\n\n      <!-- <button  (click)=getUsers() class=\"btn btn-primary\" type=\"button\" name=\"button\">Submit</button> -->\n\n    </div>\n    <div  class=\"\">\n      <img src=\"{{user.avatar_url}}\" title=\"{{user.name}}\" alt=\"\">\n      <h2>{{user.name}}</h2>\n      <p>{{user.login}}</p>\n      <p><i class=\"fab fa-megaport\"></i>: {{user.company}}</p>\n      <p><i class=\"fas fa-globe-africa\"></i>: {{user.location}}</p>\n      <p><i class=\"fas fa-biohazard\"></i>{{user.bio}}</p>\n      <a href=\"{{user.html_url}}\"><button class=\"btn btn-outline-info\" type=\"button\" name=\"button\">View on  Github</button></a>\n    </div>\n\n\n  </div>\n</div>\n\n<div class=\"col-md-8\">\n  <div *ngIf=\"loading\" class=\"form-group progress\">\n  </div>\n    <span>Repos:{{user.public_repos}}</span>\n    <hr class=\"bg-info\">\n  <div class=\"row\">\n\n\n    <div *ngFor='let repo of repos' class=\"col-md-8\">\n      <div  class=\"card mar\">\n        <div class=\"marg\">\n          <div class=\"card-title\">\n            <h5><a href=\"{{repo.html_url}}\" >{{repo.name}}</a></h5>\n          </div>\n          <div class=\"card-body\">\n            {{repo.description}} <br>\n            Date created: {{repo.created_at|date}}\n          </div>\n          <div class=\"\">\n            <span><a href=\"{{repo.languages_url}}\"></a> {{repo.language}}</span>\n          </div>\n        </div>\n\n\n      </div>\n    </div>\n    <div *ngIf='errorMessage' class=\"alert alert-warning\">\n      <strong>Warning {{errorMessage}} please Try a valid userName</strong>\n    </div>\n\n  </div>\n\n</div>\n</div>\n</div>\n"
+module.exports = "<div class=\"container-fluid\">\n<div class=\"row\">\n\n\n<div class=\"col-md-4\">\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label for=\"\">Search User</label>\n      <div class=\"search1\">\n        <i class=\"fab fa-searchengin\"></i>\n        <input (keyup)='getUsers($event)' class=\"form-control search\" placeholder=\"Search ...\" type=\"search\" name=\"userName\" [(ngModel)]=\"userName\" value=\"\">\n        <button id=\"btn\"  (click)=getRepos() (click)=getUsers(user) class=\"btn btn-primary\" type=\"button\" name=\"button\">Search</button>\n\n      </div>\n\n      <!-- <button  (click)=getUsers() class=\"btn btn-primary\" type=\"button\" name=\"button\">Submit</button> -->\n\n    </div>\n    <div  class=\"\">\n      <img src=\"{{user.avatar_url}}\" title=\"{{user.name}}\" alt=\"\">\n      <h2>{{user.name}}</h2>\n      <p>{{user.login}}</p>\n      <p><i class=\"fab fa-megaport\"></i>: {{user.company}}</p>\n      <p><i class=\"fas fa-globe-africa\"></i>: {{user.location}}</p>\n      <p><i class=\"fas fa-biohazard\"></i>{{user.bio}}</p>\n      <a href=\"{{user.html_url}}\"><button class=\"btn btn-outline-info\" type=\"button\" name=\"button\">View on  Github</button></a>\n    </div>\n\n\n  </div>\n</div>\n\n<div class=\"col-md-8\">\n  <div *ngIf=\"loading\" class=\"form-group progress\">\n  </div>\n    <span>Repos:{{user.public_repos}}</span>\n    <hr class=\"bg-info\">\n  <div class=\"row\">\n\n\n    <div *ngFor='let repo of repos' class=\"col-md-6\">\n      <div  class=\"card mar\">\n        <div class=\"marg\">\n          <div class=\"card-title\">\n            <h5><a href=\"{{repo.html_url}}\" >{{repo.name}}</a></h5>\n          </div>\n          <div class=\"card-body\">\n            {{repo.description}} <br>\n            Date created: {{repo.created_at|date}}\n          </div>\n          <div class=\"\">\n            <span><a href=\"{{repo.languages_url}}\"></a> {{repo.language}}</span>\n          </div>\n        </div>\n\n\n      </div>\n    </div>\n    <div *ngIf='errorMessage' class=\"alert alert-warning\">\n      <strong>Warning {{errorMessage}} please Try a valid userName</strong>\n    </div>\n\n  </div>\n\n</div>\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -464,18 +447,6 @@ var GithubComponent = /** @class */ (function () {
             });
         });
         return promise;
-        //promise ends
-        //   this.searchService.getRepos(this.userName).subscribe((response)=>{
-        //     this.repos=response;
-        //
-        //   },
-        //   (error)=>{
-        //     this.errorMessage=error;
-        //     this.loading=false;
-        //
-        //   },
-        //   ()=>{this.loading=false}
-        // )
     };
     GithubComponent.prototype.getUsers = function (event) {
         var _this = this;
@@ -483,47 +454,14 @@ var GithubComponent = /** @class */ (function () {
             _this.searchService.getUsers(_this.userName).toPromise().then(function (response) {
                 _this.user = response;
                 resolve();
-                // this.user=new User(response.avatar_url,response.name.data,response.company,response.location,response.html_url,response.bio,response.public_repos,response.name)
             }, function (error) {
                 _this.errorMessage = "An error was encountered";
                 reject(error);
             });
         });
         return promise;
-        //   this.loading=true;
-        //   this.searchService.getUsers(this.userName).subscribe((response)=>{
-        //     this.user=response;
-        //
-        //   },
-        //   (error)=>{
-        //
-        //
-        //   },
-        //   ()=>{this.loading=false}
-        // )
     };
     GithubComponent.prototype.ngOnInit = function () {
-        // this.searchService.gitSearch()
-        // this.user=this.searchService.user
-        //     interface ApiResponse{
-        //       name:string;
-        //       company:string;
-        //       location:string;
-        //       avatar_url:string;
-        //       login:string;
-        //       html_url:string;
-        //       bio:string;
-        //       public_repos:string;
-        //     }
-        //     this.http.get<ApiResponse>("https://api.github.com/users/kipkemoimayor").subscribe((data)=>{
-        //     this.user=new User(data.avatar_url,data.name.data,data.company,data.location,data.html_url,data.bio,data.public_repos,data.name)
-        //
-        //        // console.log(this.trend.data.data)
-        //
-        //
-        // },err=>{
-        //     console.log("Error occured ")
-        // })
     };
     GithubComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

@@ -37,7 +37,7 @@ NO known bugs as at the moment please reach to us if you see any.
 * bootstrap
 * sweetalert js
 * Angular Famework
-## You can view active website here https://kipkemoimayor.github.io/Github_search/
+## You can view active website here https://gitprofilesearch.netlify.com/
 ## Support and contact details
 get me at collinskipkemoi24@gmail.com
 ### License
